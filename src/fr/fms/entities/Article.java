@@ -23,6 +23,17 @@ public class Article {
 	}
 
 
+	@Override
+	public String toString() {
+	    return "Article{" +
+	            "IdArticle=" + IdArticle +
+	            ", Description='" + Description + '\'' +
+	            ", UnitaryPrice=" + UnitaryPrice +
+	            ", Brand='" + Brand + '\'' +
+	            '}';
+	}
+
+	
 	public int getIdArticle() {
 		return IdArticle;
 	}

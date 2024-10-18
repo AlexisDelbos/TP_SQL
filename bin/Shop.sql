@@ -65,3 +65,25 @@ ALTER TABLE t_articles ADD FOREIGN KEY(IdCategory) REFERENCES category_articles(
 -- SELECT IdArticle,t_articles.description, Brand, UnitaryPrice, NomCategory FROM t_articles INNER JOIN category_articles ON t_articles.IdCategory = category_articles.IdCategory ;
 -- 
 
+   -- 6 -- 
+   
+CREATE TABLE T_Users (
+  IdUser    INT(4) PRIMARY KEY AUTO_INCREMENT,
+  Login     VARCHAR(20) NOT NULL,
+  Password  VARCHAR(20) NOT NULL
+) ENGINE = InnoDB;
+
+	
+	
+	-- 7 -- 
+
+INSERT INTO T_Users (Login, Password) VALUES ('Alexis', 'motdepasse');
+INSERT INTO T_Users (Login, Password) VALUES ('Louis', 'capoutdraconis');
+
+
+  -- 11 -- 
+CREATE USER 'Alexis'@'localhost' IDENTIFIED BY 'motdepasse';
+GRANT ALL PRIVILEGES ON Shop.* TO 'Alexis'@'localhost';
+FLUSH PRIVILEGES;
+
+
